@@ -323,11 +323,6 @@ pm2 save && pm2 startup
 
 Built for the **New Age Women Safety App Hackathon**
 
----
-
-## 📄 License
-
-MIT License — Feel free to use, modify, and distribute for safety applications.
 
 ---
 
