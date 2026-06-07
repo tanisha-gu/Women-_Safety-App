@@ -8,13 +8,11 @@ import time
 import uuid
 from contextlib import asynccontextmanager
 from datetime import datetime
-
 import socketio
 import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-
 from store import store
 from routes.auth import router as auth_router
 from routes.sos import router as sos_router, set_sio
