@@ -1,7 +1,6 @@
 """
 Auth routes: /api/auth/register, /login, /profile, /update-profile
 """
-
 import uuid
 from datetime import datetime
 
@@ -12,32 +11,22 @@ from auth_utils import create_access_token, get_current_user_id, hash_password, 
 from store import store
 
 router = APIRouter()
-
-
 # ─── Schemas ──────────────────────────────────────────────────────────────────
 class RegisterRequest(BaseModel):
     name: str
     email: str
     phone: str
     password: str
-
-
 class LoginRequest(BaseModel):
     email: str
     password: str
-
-
 class UpdateProfileRequest(BaseModel):
     name: str | None = None
     phone: str | None = None
-
-
 # ─── Helpers ──────────────────────────────────────────────────────────────────
 def _public_user(user: dict) -> dict:
     """Strip password hash before returning."""
     return {k: v for k, v in user.items() if k != "password_hash"}
-
-
 # ─── Routes ───────────────────────────────────────────────────────────────────
 @router.post("/register", status_code=201)
 async def register(body: RegisterRequest):
