@@ -1,19 +1,14 @@
 """
 Location routes: /api/location/update, /share, /safe-zones, /current
 """
-
 import time
 from datetime import datetime
 from typing import Any
-
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
-
 from auth_utils import get_current_user_id
 from store import store
-
 router = APIRouter()
-
 
 class LocationUpdateRequest(BaseModel):
     lat: float
@@ -105,3 +100,4 @@ async def check_safe_zone(body: LocationUpdateRequest, user_id: str = Depends(ge
             return {"inside_safe_zone": True, "zone": zone, "distance_meters": round(dist, 2)}
 
     return {"inside_safe_zone": False, "zone": None}
+#this code
