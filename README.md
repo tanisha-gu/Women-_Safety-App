@@ -263,7 +263,7 @@ docker-compose down
 4. Incident logged
 5. Authorities/guardians alerted
 
----
+-------------------------------------------
 
 ## Incident Reporting Flow
 
@@ -272,7 +272,7 @@ docker-compose down
 3. Incident stored in database
 4. Admin/system can review reports
 
----
+----------------------------------------
 
 # Example Backend Endpoints
 
