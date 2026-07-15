@@ -1,6 +1,4 @@
-"""
-Incidents routes: /api/incidents — report & retrieve incidents
-"""
+# Incidents routes: /api/incidents — report & retrieve incidents
 
 import uuid
 from datetime import datetime
