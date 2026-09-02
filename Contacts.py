@@ -1,6 +1,5 @@
-"""
-Contacts routes: /api/contacts — CRUD for emergency contacts
-"""
+
+# Contacts routes: /api/contacts — CRUD for emergency contacts
 
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
