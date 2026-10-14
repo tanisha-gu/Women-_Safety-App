@@ -99,7 +99,7 @@ def _analyze_movement(accelerometer_data: list, gyroscope_data: list, location_h
         "pattern": "PANIC_MOVEMENT" if is_panic else ("ERRATIC_MOVEMENT" if is_erratic else "NORMAL"),
     }
 
-
+#_generate_safe_routes defind
 def _generate_safe_routes(start: dict, end: dict, time_of_day: int) -> list:
     is_night = time_of_day < 6 or time_of_day > 21
     mid_lat = (start["lat"] + end["lat"]) / 2
