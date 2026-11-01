@@ -36,7 +36,7 @@ class SafeRouteRequest(BaseModel):
     end_lng: float
     time_of_day: int | None = None
 
-
+#class of BaseModel
 class RiskAssessmentRequest(BaseModel):
     lat: float
     lng: float
